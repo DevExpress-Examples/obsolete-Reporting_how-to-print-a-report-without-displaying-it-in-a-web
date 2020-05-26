@@ -6,17 +6,12 @@
 <head runat="server">
 <script type="text/javascript">
     function printReport() {
-
-        var iframe = document.getElementById('reportout');
-        if (iframe != null) {
-            document.body.removeChild(iframe);
-        }
-        iframe = document.createElement("iframe");
-        iframe.setAttribute("id", "reportout");
-        iframe.style.width = 0 + "px";
-        iframe.style.height = 0 + "px";
-        document.body.appendChild(iframe);
-        document.getElementById('reportout').contentWindow.location = 'Report.aspx';
+        window.open("Report.aspx", "PrintingFrame")
+        var frameElement = document.getElementById("FrameToPrint");
+        frameElement.addEventListener("load", function (e) {
+            if (frameElement.contentDocument.contentType !== "text/html")
+                frameElement.contentWindow.print();
+        });
     }
 </script>
     <title>Direct printing</title>
@@ -24,8 +19,9 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <input id="Button1" type="button" value="Print Report via Adobe PDF plugin" onclick="printReport()"/></div>
+        <iframe id="FrameToPrint" name="PrintingFrame" style="position:absolute; left: -10000px; top: -10000px;"></iframe>
+        <input id="Button1" type="button" value="Print Report with iFrame" onclick="printReport()"/></div>
+        <b>Note:</b> Printing with an invisible iFrame element is not recommended. Although this solution provides more desktop-like experience, it's not guaranteed to work reliably across all browsers. For example, it won't work in the Edge or Safary browser. <br />
     </form>
-        <iframe id="reportout" width="0" height="0"></iframe>
 </body>
 </html>
