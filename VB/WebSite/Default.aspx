@@ -21,7 +21,7 @@
     <div>
         <iframe id="FrameToPrint" name="PrintingFrame" style="position:absolute; left: -10000px; top: -10000px;"></iframe>
         <input id="Button1" type="button" value="Print Report with iFrame" onclick="printReport()"/></div>
-        <b>Note:</b> Printing with an invisible iFrame element is not recommended. Although this solution provides more desktop-like experience, it's not guaranteed to work reliably across all browsers. For example, it won't work in the Edge or Safary browser. <br />
+        <b>Note:</b> Printing with an invisible iFrame element is not recommended. Although this solution provides more desktop-like experience, it's not guaranteed to work reliably across all browsers. For example, it won't work in the Edge or Safari browser. <br />
     </form>
 </body>
 </html>
