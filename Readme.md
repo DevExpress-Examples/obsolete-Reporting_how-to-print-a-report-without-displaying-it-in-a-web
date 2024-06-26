@@ -1,7 +1,3 @@
-<!-- default badges list -->
-[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E454)
-[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
-<!-- default badges end -->
 <!-- default file list -->
 *Files to look at*:
 
@@ -10,9 +6,6 @@
 * [Report.aspx.cs](./CS/WebSite/Report.aspx.cs) (VB: [Report.aspx.vb](./VB/WebSite/Report.aspx.vb))
 <!-- default file list end -->
 # How to print a report without displaying it in a web application
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/e454/)**
-<!-- run online end -->
 
 
 <p>This example illustrates the approach of printing report document directly, via Adobe PDF web browser plug-in.<br> This can be done by sending the exported XtraReport document via the Page.Response.OutputStream.Write method, and setting the PdfExportOptions.ShowPrintDialogOnOpen property to True.<br><br><strong>See also:</strong><br><a href="https://www.devexpress.com/Support/Center/p/T227361">How to print/export XtraReport in an ASP.NET WebForms application without showing a report preview</a></p>
